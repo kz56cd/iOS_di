@@ -8,6 +8,8 @@
 
 import Foundation
 
+// NOTE: なんらかのService
+
 protocol AnyServiceProtocol {}
 final class AnyService: AnyServiceProtocol {}
 extension AnyService {}
