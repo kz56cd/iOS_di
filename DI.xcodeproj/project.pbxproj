@@ -21,6 +21,10 @@
 		EA1B08A120A7352500E2856B /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08A020A7352500E2856B /* NavigationCoordinator.swift */; };
 		EA1B08A320A7355100E2856B /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08A220A7355100E2856B /* ViewControllerFactory.swift */; };
 		EA1B08A520A7355B00E2856B /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08A420A7355B00E2856B /* CoordinatorFactory.swift */; };
+		EA1B08A720A736D400E2856B /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08A620A736D400E2856B /* AppDependencies.swift */; };
+		EA1B08A920A7370600E2856B /* WindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08A820A7370600E2856B /* WindowCoordinator.swift */; };
+		EA1B08AB20A7372300E2856B /* RootViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08AA20A7372300E2856B /* RootViewCoordinator.swift */; };
+		EA1B08AD20A7383D00E2856B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08AC20A7383D00E2856B /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		EA1B08A020A7352500E2856B /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 		EA1B08A220A7355100E2856B /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		EA1B08A420A7355B00E2856B /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		EA1B08A620A736D400E2856B /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		EA1B08A820A7370600E2856B /* WindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCoordinator.swift; sourceTree = "<group>"; };
+		EA1B08AA20A7372300E2856B /* RootViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewCoordinator.swift; sourceTree = "<group>"; };
+		EA1B08AC20A7383D00E2856B /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 				EA1B086E20A72FF000E2856B /* Info.plist */,
 				EA1B089020A731B500E2856B /* UI */,
 				EA1B089A20A7326400E2856B /* Components */,
+				EA1B08A620A736D400E2856B /* AppDependencies.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -144,6 +153,7 @@
 		EA1B089020A731B500E2856B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EA1B08AC20A7383D00E2856B /* RootViewController.swift */,
 				EA1B089120A731B500E2856B /* DI */,
 			);
 			path = UI;
@@ -163,6 +173,8 @@
 		EA1B089220A731B500E2856B /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				EA1B08A820A7370600E2856B /* WindowCoordinator.swift */,
+				EA1B08AA20A7372300E2856B /* RootViewCoordinator.swift */,
 				EA1B089D20A734E200E2856B /* Protocol */,
 			);
 			path = Coordinator;
@@ -327,12 +339,16 @@
 			files = (
 				EA1B086520A72FED00E2856B /* ViewController.swift in Sources */,
 				EA1B089F20A734F900E2856B /* ViewControllerCoordinator.swift in Sources */,
+				EA1B08A920A7370600E2856B /* WindowCoordinator.swift in Sources */,
 				EA1B089520A731D000E2856B /* Components.swift in Sources */,
+				EA1B08AD20A7383D00E2856B /* RootViewController.swift in Sources */,
 				EA1B089C20A7326F00E2856B /* AnyService.swift in Sources */,
 				EA1B089920A731E700E2856B /* UIFactories.swift in Sources */,
 				EA1B08A520A7355B00E2856B /* CoordinatorFactory.swift in Sources */,
+				EA1B08AB20A7372300E2856B /* RootViewCoordinator.swift in Sources */,
 				EA1B08A320A7355100E2856B /* ViewControllerFactory.swift in Sources */,
 				EA1B086320A72FED00E2856B /* AppDelegate.swift in Sources */,
+				EA1B08A720A736D400E2856B /* AppDependencies.swift in Sources */,
 				EA1B08A120A7352500E2856B /* NavigationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

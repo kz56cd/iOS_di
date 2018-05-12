@@ -6,12 +6,12 @@
 //  Copyright © 2018年 Masakazu Sano. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol CoordinatorFactoryType {
     // MARK: - common
-//    func windowCoordinator(window: UIWindow) -> WindowCoordinator
-//    func rootViewCoordinator() -> RootViewCoordinator
+    func windowCoordinator(window: UIWindow) -> WindowCoordinator
+    func rootViewCoordinator() -> RootViewCoordinator
 //    func mainTabCoordinator() -> MainTabCoordinator
     
     // MARK: - personal
@@ -29,4 +29,22 @@ final class CoordinatorFactory: CoordinatorFactoryType {
         self.viewControllerFactory = viewControllerFactory
         self.components = components
     }
+    
+    // MARK: - common
+    func windowCoordinator(window: UIWindow) -> WindowCoordinator {
+        return WindowCoordinator(window: window, coordinatorFactory: self)
+    }
+    func rootViewCoordinator() -> RootViewCoordinator {
+        return RootViewCoordinator(
+            viewControllerFactory: viewControllerFactory,
+            coordinatorFactory: self
+        )
+    }
+//    func mainTabCoordinator() -> MainTabCoordinator {
+//        return MainTabCoordinator(
+//            viewControllerFactory: viewControllerFactory,
+//            coordinatorFactory: self,
+//            welcomeCoordinator: welcomeCoordinator()
+//        )
+//    }
 }

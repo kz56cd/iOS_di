@@ -10,7 +10,7 @@ import UIKit
 
 protocol ViewControllerFactoryType {
     // MARK: - common
-//    func rootViewController() -> RootViewController
+    func rootViewController() -> RootViewController
 //    func mainTab() -> (MainTabViewController, MainTabViewRouting)
 
     // MARK: - personal
@@ -21,5 +21,10 @@ final class ViewControllerFactory: ViewControllerFactoryType {
     
     init(components: ComponentsProtocol) {
         self.components = components
+    }
+    
+    func rootViewController() -> RootViewController {
+        // WIP
+        return RootViewController()
     }
 }
