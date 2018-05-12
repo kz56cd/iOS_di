@@ -24,7 +24,6 @@ final class ViewControllerFactory: ViewControllerFactoryType {
     }
     
     func rootViewController() -> RootViewController {
-        // WIP
-        return RootViewController()
+        return StoryboardScene.RootViewController.initialScene.instantiate()
     }
 }
