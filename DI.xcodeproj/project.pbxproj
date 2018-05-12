@@ -14,6 +14,20 @@
 		EA1B086D20A72FF000E2856B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1B086B20A72FF000E2856B /* LaunchScreen.storyboard */; };
 		EA1B087820A72FF000E2856B /* DITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B087720A72FF000E2856B /* DITests.swift */; };
 		EA1B088320A72FF000E2856B /* DIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B088220A72FF000E2856B /* DIUITests.swift */; };
+		EA1B089520A731D000E2856B /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B089420A731D000E2856B /* Components.swift */; };
+		EA1B089920A731E700E2856B /* UIFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B089820A731E700E2856B /* UIFactories.swift */; };
+		EA1B089C20A7326F00E2856B /* AnyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B089B20A7326F00E2856B /* AnyService.swift */; };
+		EA1B089F20A734F900E2856B /* ViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B089E20A734F900E2856B /* ViewControllerCoordinator.swift */; };
+		EA1B08A120A7352500E2856B /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08A020A7352500E2856B /* NavigationCoordinator.swift */; };
+		EA1B08A320A7355100E2856B /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08A220A7355100E2856B /* ViewControllerFactory.swift */; };
+		EA1B08A520A7355B00E2856B /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08A420A7355B00E2856B /* CoordinatorFactory.swift */; };
+		EA1B08A720A736D400E2856B /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08A620A736D400E2856B /* AppDependencies.swift */; };
+		EA1B08A920A7370600E2856B /* WindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08A820A7370600E2856B /* WindowCoordinator.swift */; };
+		EA1B08AB20A7372300E2856B /* RootViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08AA20A7372300E2856B /* RootViewCoordinator.swift */; };
+		EA1B08AD20A7383D00E2856B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08AC20A7383D00E2856B /* RootViewController.swift */; };
+		EA1B08B020A73D7900E2856B /* RootViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1B08AF20A73D7900E2856B /* RootViewController.storyboard */; };
+		EA1B08B220A73DA900E2856B /* CartFile in Resources */ = {isa = PBXBuildFile; fileRef = EA1B08B120A73DA900E2856B /* CartFile */; };
+		EA1B08B620A73FC000E2856B /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08B520A73FC000E2856B /* Storyboards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +61,20 @@
 		EA1B087E20A72FF000E2856B /* DIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1B088220A72FF000E2856B /* DIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIUITests.swift; sourceTree = "<group>"; };
 		EA1B088420A72FF000E2856B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA1B089420A731D000E2856B /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		EA1B089820A731E700E2856B /* UIFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFactories.swift; sourceTree = "<group>"; };
+		EA1B089B20A7326F00E2856B /* AnyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyService.swift; sourceTree = "<group>"; };
+		EA1B089E20A734F900E2856B /* ViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinator.swift; sourceTree = "<group>"; };
+		EA1B08A020A7352500E2856B /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		EA1B08A220A7355100E2856B /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		EA1B08A420A7355B00E2856B /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		EA1B08A620A736D400E2856B /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		EA1B08A820A7370600E2856B /* WindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCoordinator.swift; sourceTree = "<group>"; };
+		EA1B08AA20A7372300E2856B /* RootViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewCoordinator.swift; sourceTree = "<group>"; };
+		EA1B08AC20A7383D00E2856B /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		EA1B08AF20A73D7900E2856B /* RootViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootViewController.storyboard; sourceTree = "<group>"; };
+		EA1B08B120A73DA900E2856B /* CartFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CartFile; sourceTree = "<group>"; };
+		EA1B08B520A73FC000E2856B /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +109,7 @@
 				EA1B087620A72FF000E2856B /* DITests */,
 				EA1B088120A72FF000E2856B /* DIUITests */,
 				EA1B086020A72FED00E2856B /* Products */,
+				EA1B08B120A73DA900E2856B /* CartFile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +127,15 @@
 			isa = PBXGroup;
 			children = (
 				EA1B086220A72FED00E2856B /* AppDelegate.swift */,
+				EA1B08A620A736D400E2856B /* AppDependencies.swift */,
 				EA1B086420A72FED00E2856B /* ViewController.swift */,
 				EA1B086620A72FED00E2856B /* Main.storyboard */,
 				EA1B086920A72FF000E2856B /* Assets.xcassets */,
 				EA1B086B20A72FF000E2856B /* LaunchScreen.storyboard */,
 				EA1B086E20A72FF000E2856B /* Info.plist */,
+				EA1B089020A731B500E2856B /* UI */,
+				EA1B089A20A7326400E2856B /* Components */,
+				EA1B08B320A73E1000E2856B /* Constants */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -125,6 +158,79 @@
 			path = DIUITests;
 			sourceTree = "<group>";
 		};
+		EA1B089020A731B500E2856B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EA1B089120A731B500E2856B /* DI */,
+				EA1B08AE20A73D6200E2856B /* Root */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EA1B089120A731B500E2856B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				EA1B089420A731D000E2856B /* Components.swift */,
+				EA1B089820A731E700E2856B /* UIFactories.swift */,
+				EA1B089220A731B500E2856B /* Coordinator */,
+				EA1B089320A731B500E2856B /* Factory */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		EA1B089220A731B500E2856B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EA1B08A820A7370600E2856B /* WindowCoordinator.swift */,
+				EA1B08AA20A7372300E2856B /* RootViewCoordinator.swift */,
+				EA1B089D20A734E200E2856B /* Protocol */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EA1B089320A731B500E2856B /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				EA1B08A220A7355100E2856B /* ViewControllerFactory.swift */,
+				EA1B08A420A7355B00E2856B /* CoordinatorFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		EA1B089A20A7326400E2856B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EA1B089B20A7326F00E2856B /* AnyService.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EA1B089D20A734E200E2856B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EA1B089E20A734F900E2856B /* ViewControllerCoordinator.swift */,
+				EA1B08A020A7352500E2856B /* NavigationCoordinator.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EA1B08AE20A73D6200E2856B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				EA1B08AF20A73D7900E2856B /* RootViewController.storyboard */,
+				EA1B08AC20A7383D00E2856B /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		EA1B08B320A73E1000E2856B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EA1B08B520A73FC000E2856B /* Storyboards.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +241,7 @@
 				EA1B085B20A72FED00E2856B /* Sources */,
 				EA1B085C20A72FED00E2856B /* Frameworks */,
 				EA1B085D20A72FED00E2856B /* Resources */,
+				EA1B08B420A73E2400E2856B /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -232,6 +339,8 @@
 				EA1B086D20A72FF000E2856B /* LaunchScreen.storyboard in Resources */,
 				EA1B086A20A72FF000E2856B /* Assets.xcassets in Resources */,
 				EA1B086820A72FED00E2856B /* Main.storyboard in Resources */,
+				EA1B08B220A73DA900E2856B /* CartFile in Resources */,
+				EA1B08B020A73D7900E2856B /* RootViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +360,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EA1B08B420A73E2400E2856B /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen >/dev/null; then\nswiftgen storyboards --template swift4 \"$PROJECT_DIR/DI\" --output \"$PROJECT_DIR/DI/Constants/Storyboards.swift\"\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA1B085B20A72FED00E2856B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EA1B086520A72FED00E2856B /* ViewController.swift in Sources */,
+				EA1B089F20A734F900E2856B /* ViewControllerCoordinator.swift in Sources */,
+				EA1B08A920A7370600E2856B /* WindowCoordinator.swift in Sources */,
+				EA1B089520A731D000E2856B /* Components.swift in Sources */,
+				EA1B08AD20A7383D00E2856B /* RootViewController.swift in Sources */,
+				EA1B089C20A7326F00E2856B /* AnyService.swift in Sources */,
+				EA1B08B620A73FC000E2856B /* Storyboards.swift in Sources */,
+				EA1B089920A731E700E2856B /* UIFactories.swift in Sources */,
+				EA1B08A520A7355B00E2856B /* CoordinatorFactory.swift in Sources */,
+				EA1B08AB20A7372300E2856B /* RootViewCoordinator.swift in Sources */,
+				EA1B08A320A7355100E2856B /* ViewControllerFactory.swift in Sources */,
 				EA1B086320A72FED00E2856B /* AppDelegate.swift in Sources */,
+				EA1B08A720A736D400E2856B /* AppDependencies.swift in Sources */,
+				EA1B08A120A7352500E2856B /* NavigationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

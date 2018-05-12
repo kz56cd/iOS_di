@@ -10,12 +10,19 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    // MARK: - Properties
     var window: UIWindow?
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    var windowCoordinator: WindowCoordinator?
+    var appDependencies: AppDependenciesProtocol?
+    
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?
+        ) -> Bool {
+        configureInfrastructure(
+            application,
+            didFinishLaunchingWithOptions: launchOptions
+        )
         return true
     }
 
@@ -41,6 +48,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    // MARK: - private
+    private func configureInfrastructure(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?
+        ) {
+        
+        // NOTE: configure something
+        
+        prepareAppDependencies()
+    }
+    
+    private func prepareAppDependencies() {
+        appDependencies = AppDependencies()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        windowCoordinator = appDependencies!.windowCoordinator(window: window!)
+        windowCoordinator!.start()
+    }
 }
 
