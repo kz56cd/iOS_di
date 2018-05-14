@@ -11,7 +11,7 @@ import UIKit
 final class RootViewCoordinator {
     
     fileprivate let rootViewController: RootViewController
-//    fileprivate let mainTabCoordinator: MainTabCoordinator
+    fileprivate let mainTabCoordinator: MainTabCoordinator
 //    fileprivate var welcomeCoordinator: WelcomeCoordinator?
     
     let viewControllerFactory: ViewControllerFactoryType
@@ -24,7 +24,7 @@ final class RootViewCoordinator {
         self.viewControllerFactory = viewControllerFactory
         self.coordinatorFactory = coordinatorFactory
         rootViewController = viewControllerFactory.rootViewController()
-//        mainTabCoordinator = coordinatorFactory.mainTabCoordinator()
+        mainTabCoordinator = coordinatorFactory.mainTabCoordinator()
     }
 }
 
@@ -35,8 +35,8 @@ extension RootViewCoordinator: ViewControllerCoordinator {
     }
     
     func start() {
-//        rootViewController.viewController = mainTabCoordinator.presenter
-//        mainTabCoordinator.start()
+        rootViewController.viewController = mainTabCoordinator.presenter
+        mainTabCoordinator.start()
         
 //        if !TokenStatusProvider().hasTokens {
 //            presentWelcomeViews()

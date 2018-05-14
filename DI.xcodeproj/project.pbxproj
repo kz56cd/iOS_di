@@ -28,6 +28,13 @@
 		EA1B08B020A73D7900E2856B /* RootViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1B08AF20A73D7900E2856B /* RootViewController.storyboard */; };
 		EA1B08B220A73DA900E2856B /* CartFile in Resources */ = {isa = PBXBuildFile; fileRef = EA1B08B120A73DA900E2856B /* CartFile */; };
 		EA1B08B620A73FC000E2856B /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08B520A73FC000E2856B /* Storyboards.swift */; };
+		EAA24C2920A9178D000239DB /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */; };
+		EAA24C2C20A9187A000239DB /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C2B20A9187A000239DB /* MainTabViewController.swift */; };
+		EAA24C2F20A91C04000239DB /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA24C2E20A91C04000239DB /* Prelude.framework */; };
+		EAA24C3420A91D68000239DB /* PhotoTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C3320A91D68000239DB /* PhotoTopViewController.swift */; };
+		EAA24C3620A91D79000239DB /* PhotoTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA24C3520A91D79000239DB /* PhotoTopViewController.storyboard */; };
+		EAA24C3820A91E1D000239DB /* PhotoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C3720A91E1D000239DB /* PhotoCoordinator.swift */; };
+		EAF068DE20A923C7007B5243 /* FontAwesomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF068DD20A923C7007B5243 /* FontAwesomeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +82,13 @@
 		EA1B08AF20A73D7900E2856B /* RootViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootViewController.storyboard; sourceTree = "<group>"; };
 		EA1B08B120A73DA900E2856B /* CartFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CartFile; sourceTree = "<group>"; };
 		EA1B08B520A73FC000E2856B /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
+		EAA24C2B20A9187A000239DB /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		EAA24C2E20A91C04000239DB /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Prelude.framework; path = Carthage/Build/iOS/Prelude.framework; sourceTree = "<group>"; };
+		EAA24C3320A91D68000239DB /* PhotoTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTopViewController.swift; sourceTree = "<group>"; };
+		EAA24C3520A91D79000239DB /* PhotoTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoTopViewController.storyboard; sourceTree = "<group>"; };
+		EAA24C3720A91E1D000239DB /* PhotoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCoordinator.swift; sourceTree = "<group>"; };
+		EAF068DD20A923C7007B5243 /* FontAwesomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesomeKit.framework; path = Carthage/Build/iOS/FontAwesomeKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF068DE20A923C7007B5243 /* FontAwesomeKit.framework in Frameworks */,
+				EAA24C2F20A91C04000239DB /* Prelude.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +125,7 @@
 				EA1B087620A72FF000E2856B /* DITests */,
 				EA1B088120A72FF000E2856B /* DIUITests */,
 				EA1B086020A72FED00E2856B /* Products */,
+				EAA24C2D20A91C04000239DB /* Frameworks */,
 				EA1B08B120A73DA900E2856B /* CartFile */,
 			);
 			sourceTree = "<group>";
@@ -163,6 +180,9 @@
 			children = (
 				EA1B089120A731B500E2856B /* DI */,
 				EA1B08AE20A73D6200E2856B /* Root */,
+				EAA24C2A20A91827000239DB /* MainTab */,
+				EAA24C3220A91D27000239DB /* Photo */,
+				EAA24C3120A91D26000239DB /* User */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -183,6 +203,8 @@
 			children = (
 				EA1B08A820A7370600E2856B /* WindowCoordinator.swift */,
 				EA1B08AA20A7372300E2856B /* RootViewCoordinator.swift */,
+				EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */,
+				EAA24C3720A91E1D000239DB /* PhotoCoordinator.swift */,
 				EA1B089D20A734E200E2856B /* Protocol */,
 			);
 			path = Coordinator;
@@ -231,6 +253,40 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		EAA24C2A20A91827000239DB /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				EAA24C2B20A9187A000239DB /* MainTabViewController.swift */,
+			);
+			name = MainTab;
+			path = DI/UI/MainTab;
+			sourceTree = SOURCE_ROOT;
+		};
+		EAA24C2D20A91C04000239DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAF068DD20A923C7007B5243 /* FontAwesomeKit.framework */,
+				EAA24C2E20A91C04000239DB /* Prelude.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAA24C3120A91D26000239DB /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		EAA24C3220A91D27000239DB /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				EAA24C3520A91D79000239DB /* PhotoTopViewController.storyboard */,
+				EAA24C3320A91D68000239DB /* PhotoTopViewController.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,6 +298,7 @@
 				EA1B085C20A72FED00E2856B /* Frameworks */,
 				EA1B085D20A72FED00E2856B /* Resources */,
 				EA1B08B420A73E2400E2856B /* SwiftGen */,
+				EAA24C3020A91C0B000239DB /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -336,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA24C3620A91D79000239DB /* PhotoTopViewController.storyboard in Resources */,
 				EA1B086D20A72FF000E2856B /* LaunchScreen.storyboard in Resources */,
 				EA1B086A20A72FF000E2856B /* Assets.xcassets in Resources */,
 				EA1B086820A72FED00E2856B /* Main.storyboard in Resources */,
@@ -375,6 +433,22 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftgen >/dev/null; then\nswiftgen storyboards --template swift4 \"$PROJECT_DIR/DI\" --output \"$PROJECT_DIR/DI/Constants/Storyboards.swift\"\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
 		};
+		EAA24C3020A91C0B000239DB /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Prelude.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FontAwesomeKit.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -383,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA1B086520A72FED00E2856B /* ViewController.swift in Sources */,
+				EAA24C2C20A9187A000239DB /* MainTabViewController.swift in Sources */,
 				EA1B089F20A734F900E2856B /* ViewControllerCoordinator.swift in Sources */,
 				EA1B08A920A7370600E2856B /* WindowCoordinator.swift in Sources */,
 				EA1B089520A731D000E2856B /* Components.swift in Sources */,
@@ -390,12 +465,15 @@
 				EA1B089C20A7326F00E2856B /* AnyService.swift in Sources */,
 				EA1B08B620A73FC000E2856B /* Storyboards.swift in Sources */,
 				EA1B089920A731E700E2856B /* UIFactories.swift in Sources */,
+				EAA24C3820A91E1D000239DB /* PhotoCoordinator.swift in Sources */,
 				EA1B08A520A7355B00E2856B /* CoordinatorFactory.swift in Sources */,
 				EA1B08AB20A7372300E2856B /* RootViewCoordinator.swift in Sources */,
 				EA1B08A320A7355100E2856B /* ViewControllerFactory.swift in Sources */,
 				EA1B086320A72FED00E2856B /* AppDelegate.swift in Sources */,
 				EA1B08A720A736D400E2856B /* AppDependencies.swift in Sources */,
+				EAA24C2920A9178D000239DB /* MainTabCoordinator.swift in Sources */,
 				EA1B08A120A7352500E2856B /* NavigationCoordinator.swift in Sources */,
+				EAA24C3420A91D68000239DB /* PhotoTopViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +648,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -588,6 +670,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

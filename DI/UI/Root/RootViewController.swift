@@ -7,10 +7,28 @@
 //
 
 import UIKit
+import Prelude
 
-class RootViewController: UIViewController {
+final class RootViewController: UIViewController, ContainerViewShowing {
+    
+    var viewController: UIViewController?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var containerView: UIView!
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        prepareContainerView()
+//    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        prepareContainerView()
+    }
+}
+
+extension RootViewController {
+    fileprivate func prepareContainerView() {
+        guard let viewController = viewController else { return }
+        self.addChildViewController(viewController, to: containerView)
     }
 }

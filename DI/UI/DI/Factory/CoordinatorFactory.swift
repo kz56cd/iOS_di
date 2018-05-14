@@ -12,10 +12,11 @@ protocol CoordinatorFactoryType {
     // MARK: - common
     func windowCoordinator(window: UIWindow) -> WindowCoordinator
     func rootViewCoordinator() -> RootViewCoordinator
-//    func mainTabCoordinator() -> MainTabCoordinator
+    func mainTabCoordinator() -> MainTabCoordinator
     
     // MARK: - personal
 //    func welcomeCoordinator() -> WelcomeCoordinator
+    func photoCoordinator() -> PhotoCoordinatorProtocol
 }
 
 final class CoordinatorFactory: CoordinatorFactoryType {
@@ -40,11 +41,18 @@ final class CoordinatorFactory: CoordinatorFactoryType {
             coordinatorFactory: self
         )
     }
-//    func mainTabCoordinator() -> MainTabCoordinator {
-//        return MainTabCoordinator(
-//            viewControllerFactory: viewControllerFactory,
-//            coordinatorFactory: self,
-//            welcomeCoordinator: welcomeCoordinator()
-//        )
-//    }
+    func mainTabCoordinator() -> MainTabCoordinator {
+        return MainTabCoordinator(
+            viewControllerFactory: viewControllerFactory,
+            coordinatorFactory: self
+        )
+    }
+    
+    // MARK: - personal
+    func photoCoordinator() -> PhotoCoordinatorProtocol {
+        return PhotoCoordinator(
+            viewControllerFactory: viewControllerFactory,
+            coordinatorFactory: self
+        )
+    }
 }
