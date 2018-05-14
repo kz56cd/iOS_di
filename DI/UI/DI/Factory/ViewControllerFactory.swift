@@ -36,7 +36,9 @@ final class ViewControllerFactory: ViewControllerFactoryType {
     
     // MARK: - personal
     func photoTop() -> PhotoTopViewController {
-        return StoryboardScene.PhotoTopViewController.initialScene.instantiate()
+        let viewController = StoryboardScene.PhotoTopViewController.initialScene.instantiate()
+        viewController.reactor = PhotoTopViewReactor()
+        return viewController
     }
     
     func userTop() -> UserTopViewController {

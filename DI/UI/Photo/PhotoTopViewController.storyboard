@@ -52,6 +52,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PVQ-2y-BYA"/>
                     </view>
+                    <connections>
+                        <outlet property="photoDetail01button" destination="C6I-h6-JfE" id="VPA-Ki-iiH"/>
+                        <outlet property="photoDetail02button" destination="l0J-B8-SuE" id="S6m-jm-ltA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WS6-XO-QSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
