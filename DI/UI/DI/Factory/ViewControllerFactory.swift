@@ -14,6 +14,7 @@ protocol ViewControllerFactoryType {
     func mainTab() -> MainTabViewController
 
     // MARK: - personal
+    func photoTop() -> PhotoTopViewController
 }
 
 final class ViewControllerFactory: ViewControllerFactoryType {
@@ -23,11 +24,16 @@ final class ViewControllerFactory: ViewControllerFactoryType {
         self.components = components
     }
     
+    // MARK: - common
     func rootViewController() -> RootViewController {
         return StoryboardScene.RootViewController.initialScene.instantiate()
     }
-    
     func mainTab() -> MainTabViewController {
         return MainTabViewController()
+    }
+    
+    // MARK: - personal
+    func photoTop() -> PhotoTopViewController {
+        return StoryboardScene.PhotoTopViewController.initialScene.instantiate()
     }
 }

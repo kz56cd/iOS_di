@@ -63,6 +63,11 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<ViewController>(storyboard: Main.self)
   }
+  internal enum PhotoTopViewController: StoryboardType {
+    internal static let storyboardName = "PhotoTopViewController"
+
+    internal static let initialScene = InitialSceneType<DI.PhotoTopViewController>(storyboard: PhotoTopViewController.self)
+  }
   internal enum RootViewController: StoryboardType {
     internal static let storyboardName = "RootViewController"
 

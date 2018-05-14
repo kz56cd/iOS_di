@@ -31,6 +31,10 @@
 		EAA24C2920A9178D000239DB /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */; };
 		EAA24C2C20A9187A000239DB /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C2B20A9187A000239DB /* MainTabViewController.swift */; };
 		EAA24C2F20A91C04000239DB /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA24C2E20A91C04000239DB /* Prelude.framework */; };
+		EAA24C3420A91D68000239DB /* PhotoTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C3320A91D68000239DB /* PhotoTopViewController.swift */; };
+		EAA24C3620A91D79000239DB /* PhotoTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA24C3520A91D79000239DB /* PhotoTopViewController.storyboard */; };
+		EAA24C3820A91E1D000239DB /* PhotoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C3720A91E1D000239DB /* PhotoCoordinator.swift */; };
+		EAF068DE20A923C7007B5243 /* FontAwesomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF068DD20A923C7007B5243 /* FontAwesomeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		EAA24C2B20A9187A000239DB /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		EAA24C2E20A91C04000239DB /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Prelude.framework; path = Carthage/Build/iOS/Prelude.framework; sourceTree = "<group>"; };
+		EAA24C3320A91D68000239DB /* PhotoTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTopViewController.swift; sourceTree = "<group>"; };
+		EAA24C3520A91D79000239DB /* PhotoTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoTopViewController.storyboard; sourceTree = "<group>"; };
+		EAA24C3720A91E1D000239DB /* PhotoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCoordinator.swift; sourceTree = "<group>"; };
+		EAF068DD20A923C7007B5243 /* FontAwesomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesomeKit.framework; path = Carthage/Build/iOS/FontAwesomeKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF068DE20A923C7007B5243 /* FontAwesomeKit.framework in Frameworks */,
 				EAA24C2F20A91C04000239DB /* Prelude.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,8 +125,8 @@
 				EA1B087620A72FF000E2856B /* DITests */,
 				EA1B088120A72FF000E2856B /* DIUITests */,
 				EA1B086020A72FED00E2856B /* Products */,
-				EA1B08B120A73DA900E2856B /* CartFile */,
 				EAA24C2D20A91C04000239DB /* Frameworks */,
+				EA1B08B120A73DA900E2856B /* CartFile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +181,8 @@
 				EA1B089120A731B500E2856B /* DI */,
 				EA1B08AE20A73D6200E2856B /* Root */,
 				EAA24C2A20A91827000239DB /* MainTab */,
+				EAA24C3220A91D27000239DB /* Photo */,
+				EAA24C3120A91D26000239DB /* User */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -192,8 +203,9 @@
 			children = (
 				EA1B08A820A7370600E2856B /* WindowCoordinator.swift */,
 				EA1B08AA20A7372300E2856B /* RootViewCoordinator.swift */,
-				EA1B089D20A734E200E2856B /* Protocol */,
 				EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */,
+				EAA24C3720A91E1D000239DB /* PhotoCoordinator.swift */,
+				EA1B089D20A734E200E2856B /* Protocol */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -253,9 +265,26 @@
 		EAA24C2D20A91C04000239DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAF068DD20A923C7007B5243 /* FontAwesomeKit.framework */,
 				EAA24C2E20A91C04000239DB /* Prelude.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAA24C3120A91D26000239DB /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		EAA24C3220A91D27000239DB /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				EAA24C3520A91D79000239DB /* PhotoTopViewController.storyboard */,
+				EAA24C3320A91D68000239DB /* PhotoTopViewController.swift */,
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA24C3620A91D79000239DB /* PhotoTopViewController.storyboard in Resources */,
 				EA1B086D20A72FF000E2856B /* LaunchScreen.storyboard in Resources */,
 				EA1B086A20A72FF000E2856B /* Assets.xcassets in Resources */,
 				EA1B086820A72FED00E2856B /* Main.storyboard in Resources */,
@@ -410,6 +440,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Prelude.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FontAwesomeKit.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -434,6 +465,7 @@
 				EA1B089C20A7326F00E2856B /* AnyService.swift in Sources */,
 				EA1B08B620A73FC000E2856B /* Storyboards.swift in Sources */,
 				EA1B089920A731E700E2856B /* UIFactories.swift in Sources */,
+				EAA24C3820A91E1D000239DB /* PhotoCoordinator.swift in Sources */,
 				EA1B08A520A7355B00E2856B /* CoordinatorFactory.swift in Sources */,
 				EA1B08AB20A7372300E2856B /* RootViewCoordinator.swift in Sources */,
 				EA1B08A320A7355100E2856B /* ViewControllerFactory.swift in Sources */,
@@ -441,6 +473,7 @@
 				EA1B08A720A736D400E2856B /* AppDependencies.swift in Sources */,
 				EAA24C2920A9178D000239DB /* MainTabCoordinator.swift in Sources */,
 				EA1B08A120A7352500E2856B /* NavigationCoordinator.swift in Sources */,
+				EAA24C3420A91D68000239DB /* PhotoTopViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

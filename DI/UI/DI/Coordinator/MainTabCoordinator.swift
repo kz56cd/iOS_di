@@ -30,11 +30,8 @@ final class MainTabCoordinator {
         mainTabController = vc
 //        mainTabRouter = router
         childCoordinators = [
-//            coordinatorFactory.streamCoordinator(),
-//            coordinatorFactory.searchCoordinator(),
-//            coordinatorFactory.postCoordinator(),
-//            coordinatorFactory.noticeCoordinator(),
-//            coordinatorFactory.profileCoordinator()
+            coordinatorFactory.photoCoordinator(),
+            coordinatorFactory.photoCoordinator()
         ]
     }
 }

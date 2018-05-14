@@ -16,6 +16,7 @@ protocol CoordinatorFactoryType {
     
     // MARK: - personal
 //    func welcomeCoordinator() -> WelcomeCoordinator
+    func photoCoordinator() -> PhotoCoordinatorProtocol
 }
 
 final class CoordinatorFactory: CoordinatorFactoryType {
@@ -42,6 +43,14 @@ final class CoordinatorFactory: CoordinatorFactoryType {
     }
     func mainTabCoordinator() -> MainTabCoordinator {
         return MainTabCoordinator(
+            viewControllerFactory: viewControllerFactory,
+            coordinatorFactory: self
+        )
+    }
+    
+    // MARK: - personal
+    func photoCoordinator() -> PhotoCoordinatorProtocol {
+        return PhotoCoordinator(
             viewControllerFactory: viewControllerFactory,
             coordinatorFactory: self
         )
