@@ -17,6 +17,7 @@ protocol CoordinatorFactoryType {
     // MARK: - personal
 //    func welcomeCoordinator() -> WelcomeCoordinator
     func photoCoordinator() -> PhotoCoordinatorProtocol
+    func userCoordinator() -> UserCoordinatorProtocol
 }
 
 final class CoordinatorFactory: CoordinatorFactoryType {
@@ -51,6 +52,13 @@ final class CoordinatorFactory: CoordinatorFactoryType {
     // MARK: - personal
     func photoCoordinator() -> PhotoCoordinatorProtocol {
         return PhotoCoordinator(
+            viewControllerFactory: viewControllerFactory,
+            coordinatorFactory: self
+        )
+    }
+    
+    func userCoordinator() -> UserCoordinatorProtocol {
+        return UserCoordinator(
             viewControllerFactory: viewControllerFactory,
             coordinatorFactory: self
         )

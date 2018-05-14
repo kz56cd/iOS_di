@@ -31,7 +31,7 @@ final class MainTabCoordinator {
 //        mainTabRouter = router
         childCoordinators = [
             coordinatorFactory.photoCoordinator(),
-            coordinatorFactory.photoCoordinator()
+            coordinatorFactory.userCoordinator()
         ]
     }
 }
