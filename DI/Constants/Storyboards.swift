@@ -73,6 +73,11 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<DI.RootViewController>(storyboard: RootViewController.self)
   }
+  internal enum UserTopViewController: StoryboardType {
+    internal static let storyboardName = "UserTopViewController"
+
+    internal static let initialScene = InitialSceneType<DI.UserTopViewController>(storyboard: UserTopViewController.self)
+  }
 }
 
 internal enum StoryboardSegue {

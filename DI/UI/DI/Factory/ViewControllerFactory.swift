@@ -15,6 +15,8 @@ protocol ViewControllerFactoryType {
 
     // MARK: - personal
     func photoTop() -> PhotoTopViewController
+
+    func userTop() -> UserTopViewController
 }
 
 final class ViewControllerFactory: ViewControllerFactoryType {
@@ -35,5 +37,9 @@ final class ViewControllerFactory: ViewControllerFactoryType {
     // MARK: - personal
     func photoTop() -> PhotoTopViewController {
         return StoryboardScene.PhotoTopViewController.initialScene.instantiate()
+    }
+    
+    func userTop() -> UserTopViewController {
+        return StoryboardScene.UserTopViewController.initialScene.instantiate()
     }
 }

@@ -35,6 +35,9 @@
 		EAA24C3620A91D79000239DB /* PhotoTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA24C3520A91D79000239DB /* PhotoTopViewController.storyboard */; };
 		EAA24C3820A91E1D000239DB /* PhotoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C3720A91E1D000239DB /* PhotoCoordinator.swift */; };
 		EAF068DE20A923C7007B5243 /* FontAwesomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF068DD20A923C7007B5243 /* FontAwesomeKit.framework */; };
+		EAF068E020A95CFB007B5243 /* UserTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF068DF20A95CFB007B5243 /* UserTopViewController.swift */; };
+		EAF068E220A95D20007B5243 /* UserTopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF068E120A95D20007B5243 /* UserTopViewController.storyboard */; };
+		EAF068E420A95D95007B5243 /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF068E320A95D95007B5243 /* UserCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		EAA24C3520A91D79000239DB /* PhotoTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoTopViewController.storyboard; sourceTree = "<group>"; };
 		EAA24C3720A91E1D000239DB /* PhotoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCoordinator.swift; sourceTree = "<group>"; };
 		EAF068DD20A923C7007B5243 /* FontAwesomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesomeKit.framework; path = Carthage/Build/iOS/FontAwesomeKit.framework; sourceTree = "<group>"; };
+		EAF068DF20A95CFB007B5243 /* UserTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTopViewController.swift; sourceTree = "<group>"; };
+		EAF068E120A95D20007B5243 /* UserTopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserTopViewController.storyboard; sourceTree = "<group>"; };
+		EAF068E320A95D95007B5243 /* UserCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +211,7 @@
 				EA1B08AA20A7372300E2856B /* RootViewCoordinator.swift */,
 				EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */,
 				EAA24C3720A91E1D000239DB /* PhotoCoordinator.swift */,
+				EAF068E320A95D95007B5243 /* UserCoordinator.swift */,
 				EA1B089D20A734E200E2856B /* Protocol */,
 			);
 			path = Coordinator;
@@ -274,6 +281,8 @@
 		EAA24C3120A91D26000239DB /* User */ = {
 			isa = PBXGroup;
 			children = (
+				EAF068E120A95D20007B5243 /* UserTopViewController.storyboard */,
+				EAF068DF20A95CFB007B5243 /* UserTopViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -393,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF068E220A95D20007B5243 /* UserTopViewController.storyboard in Resources */,
 				EAA24C3620A91D79000239DB /* PhotoTopViewController.storyboard in Resources */,
 				EA1B086D20A72FF000E2856B /* LaunchScreen.storyboard in Resources */,
 				EA1B086A20A72FF000E2856B /* Assets.xcassets in Resources */,
@@ -466,6 +476,7 @@
 				EA1B08B620A73FC000E2856B /* Storyboards.swift in Sources */,
 				EA1B089920A731E700E2856B /* UIFactories.swift in Sources */,
 				EAA24C3820A91E1D000239DB /* PhotoCoordinator.swift in Sources */,
+				EAF068E020A95CFB007B5243 /* UserTopViewController.swift in Sources */,
 				EA1B08A520A7355B00E2856B /* CoordinatorFactory.swift in Sources */,
 				EA1B08AB20A7372300E2856B /* RootViewCoordinator.swift in Sources */,
 				EA1B08A320A7355100E2856B /* ViewControllerFactory.swift in Sources */,
@@ -474,6 +485,7 @@
 				EAA24C2920A9178D000239DB /* MainTabCoordinator.swift in Sources */,
 				EA1B08A120A7352500E2856B /* NavigationCoordinator.swift in Sources */,
 				EAA24C3420A91D68000239DB /* PhotoTopViewController.swift in Sources */,
+				EAF068E420A95D95007B5243 /* UserCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
