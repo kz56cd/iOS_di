@@ -7,10 +7,21 @@
 //
 
 import UIKit
+//import 
 
-class RootViewController: UIViewController {
+final class RootViewController: UIViewController {
+    
+    var viewController: UIViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+}
+
+extension RootViewController {
+    fileprivate func prepareContainerView() {
+        guard let viewController = viewController else { return }
+        
     }
 }

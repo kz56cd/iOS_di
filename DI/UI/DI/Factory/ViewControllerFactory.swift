@@ -11,7 +11,7 @@ import UIKit
 protocol ViewControllerFactoryType {
     // MARK: - common
     func rootViewController() -> RootViewController
-//    func mainTab() -> (MainTabViewController, MainTabViewRouting)
+    func mainTab() -> MainTabViewController
 
     // MARK: - personal
 }
@@ -25,5 +25,9 @@ final class ViewControllerFactory: ViewControllerFactoryType {
     
     func rootViewController() -> RootViewController {
         return StoryboardScene.RootViewController.initialScene.instantiate()
+    }
+    
+    func mainTab() -> MainTabViewController {
+        return MainTabViewController()
     }
 }
