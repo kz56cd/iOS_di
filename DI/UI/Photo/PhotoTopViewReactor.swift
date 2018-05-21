@@ -41,11 +41,11 @@ final class PhotoTopViewReactor: Reactor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .tappedDetail01:
-            print(".tappedDetail01")
+            print("mutate: .tappedDetail01")
             routeSelectedSubject.onNext(.detail01)
             return Observable.empty()
         case .tappedDetail02:
-            print(".tappedDetail02")
+            print("mutate: .tappedDetail02")
             routeSelectedSubject.onNext(.detail02)
             return Observable.empty()
         }

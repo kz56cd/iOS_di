@@ -10,7 +10,7 @@ import UIKit
 import FontAwesomeKit
 
 // TODO: Inheritance detailPresentable...
-protocol PhotoCoordinatorProtocol: NavigationCoordinator {
+protocol PhotoCoordinatorProtocol: NavigationCoordinator, DetailsPresentable {
     // stub
 }
 
@@ -44,13 +44,15 @@ final class PhotoCoordinator: PhotoCoordinatorProtocol {
         // NOTE: Add routing by router if you like ('router' also means viewmodel, or reactor..)
         _ = viewController.reactor?
             .routeSelected
-            .subscribe(onNext: { route in
+            .subscribe(onNext: { [weak self] route in
                 guard let route = route else { return }
                 switch route {
                 case .detail01:
-                    print("💋 detail01")
+                    print("💋 PhotoCoordinator: detail01")
+                    self?.pushPhotoDetail(by: 1)
                 case .detail02:
-                    print("💋 detail02")
+                    print("💋 PhotoCoordinator: detail02")
+                    self?.pushPhotoDetail(by: 2)
                 }
             })
 

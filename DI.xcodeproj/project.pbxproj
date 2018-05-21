@@ -31,6 +31,10 @@
 		EA1B08B020A73D7900E2856B /* RootViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1B08AF20A73D7900E2856B /* RootViewController.storyboard */; };
 		EA1B08B220A73DA900E2856B /* CartFile in Resources */ = {isa = PBXBuildFile; fileRef = EA1B08B120A73DA900E2856B /* CartFile */; };
 		EA1B08B620A73FC000E2856B /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B08B520A73FC000E2856B /* Storyboards.swift */; };
+		EA94800C20B29CBB000C350B /* DetailsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94800B20B29CBB000C350B /* DetailsPresentable.swift */; };
+		EA94800F20B2A0DA000C350B /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94800E20B2A0DA000C350B /* PhotoDetailViewController.swift */; };
+		EA94801120B2A0E4000C350B /* PhotoDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA94801020B2A0E4000C350B /* PhotoDetailViewController.storyboard */; };
+		EA94801320B2A0F6000C350B /* PhotoDetailViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94801220B2A0F6000C350B /* PhotoDetailViewReactor.swift */; };
 		EAA24C2920A9178D000239DB /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */; };
 		EAA24C2C20A9187A000239DB /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C2B20A9187A000239DB /* MainTabViewController.swift */; };
 		EAA24C2F20A91C04000239DB /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA24C2E20A91C04000239DB /* Prelude.framework */; };
@@ -97,6 +101,10 @@
 		EA1B08AF20A73D7900E2856B /* RootViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootViewController.storyboard; sourceTree = "<group>"; };
 		EA1B08B120A73DA900E2856B /* CartFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CartFile; sourceTree = "<group>"; };
 		EA1B08B520A73FC000E2856B /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		EA94800B20B29CBB000C350B /* DetailsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresentable.swift; sourceTree = "<group>"; };
+		EA94800E20B2A0DA000C350B /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		EA94801020B2A0E4000C350B /* PhotoDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoDetailViewController.storyboard; sourceTree = "<group>"; };
+		EA94801220B2A0F6000C350B /* PhotoDetailViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewReactor.swift; sourceTree = "<group>"; };
 		EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		EAA24C2B20A9187A000239DB /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		EAA24C2E20A91C04000239DB /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Prelude.framework; path = Carthage/Build/iOS/Prelude.framework; sourceTree = "<group>"; };
@@ -244,6 +252,7 @@
 				EAA24C3720A91E1D000239DB /* PhotoCoordinator.swift */,
 				EAF068E320A95D95007B5243 /* UserCoordinator.swift */,
 				EA1B089D20A734E200E2856B /* Protocol */,
+				EA94800A20B29CAC000C350B /* Common */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -291,6 +300,24 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		EA94800A20B29CAC000C350B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EA94800B20B29CBB000C350B /* DetailsPresentable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EA94800D20B2A0C3000C350B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				EA94801020B2A0E4000C350B /* PhotoDetailViewController.storyboard */,
+				EA94800E20B2A0DA000C350B /* PhotoDetailViewController.swift */,
+				EA94801220B2A0F6000C350B /* PhotoDetailViewReactor.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		EAA24C2A20A91827000239DB /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +354,7 @@
 				EAA24C3520A91D79000239DB /* PhotoTopViewController.storyboard */,
 				EAA24C3320A91D68000239DB /* PhotoTopViewController.swift */,
 				EADBDB9920A9A02B006798E7 /* PhotoTopViewReactor.swift */,
+				EA94800D20B2A0C3000C350B /* Detail */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -448,6 +476,7 @@
 				EA1B086820A72FED00E2856B /* Main.storyboard in Resources */,
 				EA1B08B220A73DA900E2856B /* CartFile in Resources */,
 				EA1B08B020A73D7900E2856B /* RootViewController.storyboard in Resources */,
+				EA94801120B2A0E4000C350B /* PhotoDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,7 +617,9 @@
 				EA1B089520A731D000E2856B /* Components.swift in Sources */,
 				EADBDB9A20A9A02B006798E7 /* PhotoTopViewReactor.swift in Sources */,
 				EA1B08AD20A7383D00E2856B /* RootViewController.swift in Sources */,
+				EA94801320B2A0F6000C350B /* PhotoDetailViewReactor.swift in Sources */,
 				EA1B089C20A7326F00E2856B /* AnyService.swift in Sources */,
+				EA94800C20B29CBB000C350B /* DetailsPresentable.swift in Sources */,
 				EA1B08B620A73FC000E2856B /* Storyboards.swift in Sources */,
 				EA1B089920A731E700E2856B /* UIFactories.swift in Sources */,
 				EAA24C3820A91E1D000239DB /* PhotoCoordinator.swift in Sources */,
@@ -598,6 +629,7 @@
 				EA1B08A320A7355100E2856B /* ViewControllerFactory.swift in Sources */,
 				EA1B086320A72FED00E2856B /* AppDelegate.swift in Sources */,
 				EA1B08A720A736D400E2856B /* AppDependencies.swift in Sources */,
+				EA94800F20B2A0DA000C350B /* PhotoDetailViewController.swift in Sources */,
 				EAA24C2920A9178D000239DB /* MainTabCoordinator.swift in Sources */,
 				EA1B08A120A7352500E2856B /* NavigationCoordinator.swift in Sources */,
 				EAA24C3420A91D68000239DB /* PhotoTopViewController.swift in Sources */,
@@ -782,7 +814,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = DI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.DI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -802,7 +837,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = DI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.DI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -819,7 +857,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = DITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.DITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -837,7 +879,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = DITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.DITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -854,7 +900,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = DIUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.DIUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -871,7 +921,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZMTZ3U33V;
 				INFOPLIST_FILE = DIUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.ka56cd.DIUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
