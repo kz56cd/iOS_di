@@ -24,8 +24,6 @@ class PhotoTopViewController: UIViewController, StoryboardView {
 // MARK - ReactorKit
 extension PhotoTopViewController {
     func bind(reactor: PhotoTopViewReactor) {
-        print("kiteru???")
-        
         // Action
         photoDetail01button.rx.tap
             .map {

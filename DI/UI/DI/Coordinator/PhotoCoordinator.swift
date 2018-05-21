@@ -41,20 +41,18 @@ final class PhotoCoordinator: PhotoCoordinatorProtocol {
         let viewController = viewControllerFactory.photoTop()
         navigationController.pushViewController(viewController, animated: true)
         
-        let router = viewController.reactor
-        _ = router?
+        // NOTE: Add routing by router if you like ('router' also means viewmodel, or reactor..)
+        _ = viewController.reactor?
             .routeSelected
-            .asDriver(onErrorJustReturn: .none)
-            .drive(onNext: { route in
+            .subscribe(onNext: { route in
+                guard let route = route else { return }
                 switch route {
                 case .detail01:
-                    print("detail01")
+                    print("💋 detail01")
                 case .detail02:
-                    print("detail02")
-                case .none:
-                    print("none")
+                    print("💋 detail02")
                 }
             })
-        // NOTE: Add routing by router if you like ('router' also means viewmodel, or reactor..)
+
     }
 }

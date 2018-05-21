@@ -7,17 +7,15 @@
 //
 
 import ReactorKit
-//import RxCocoa
 import RxSwift
 
 protocol PhotoTopViewRouting {
-    var routeSelected: Observable<PhotoTopViewRouter> { get }
+    var routeSelected: Observable<PhotoTopViewRouter?> { get }
 }
 
 enum PhotoTopViewRouter {
     case detail01
     case detail02
-    case none // TODO: 廃止したい
 }
 
 final class PhotoTopViewReactor: Reactor {
@@ -31,24 +29,24 @@ final class PhotoTopViewReactor: Reactor {
     
     struct State {}
     
-    let routeSelected: Observable<PhotoTopViewRouter>
+    let routeSelected: Observable<PhotoTopViewRouter?>
     let initialState = State()
     
-    private var routeSelectedJust: Observable<PhotoTopViewRouter> = Observable.empty()
+    private var routeSelectedSubject = PublishSubject<PhotoTopViewRouter?>()
     
     init() {
-        // TODO:
-        // pipe()のようなものでrouteSelectedを初期化、バインドしたい
-        routeSelected = routeSelectedJust
+        routeSelected = routeSelectedSubject.asObservable()
     }
     
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .tappedDetail01:
-            routeSelectedJust = Observable.just(.detail01)
+            print(".tappedDetail01")
+            routeSelectedSubject.onNext(.detail01)
             return Observable.empty()
         case .tappedDetail02:
-            routeSelectedJust = Observable.just(.detail02)
+            print(".tappedDetail02")
+            routeSelectedSubject.onNext(.detail02)
             return Observable.empty()
         }
     }
@@ -64,4 +62,5 @@ final class PhotoTopViewReactor: Reactor {
     }
 }
 
-extension PhotoTopViewReactor: PhotoTopViewRouting {}
+extension PhotoTopViewReactor: PhotoTopViewRouting {
+}
