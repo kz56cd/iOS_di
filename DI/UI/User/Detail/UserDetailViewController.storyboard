@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NxG-ET-Evx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Detail View Controller-->
+        <scene sceneID="sSq-3k-6cB">
+            <objects>
+                <viewController id="NxG-ET-Evx" customClass="UserDetailViewController" customModule="DI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o7t-c1-Grc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9sm-ji-kpT">
+                                <rect key="frame" x="50" y="233.5" width="275" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzI-Sm-cPT">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="100"/>
+                                        <state key="normal" title="PhotoDetail"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1U-WX-APe">
+                                        <rect key="frame" x="0.0" y="100" width="275" height="100"/>
+                                        <state key="normal" title="(other) UserDetail"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5GS-JH-W0B"/>
+                                    <constraint firstItem="Q1U-WX-APe" firstAttribute="height" secondItem="KzI-Sm-cPT" secondAttribute="height" id="hvg-gX-cdn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kfc-fo-0e5" firstAttribute="trailing" secondItem="9sm-ji-kpT" secondAttribute="trailing" constant="50" id="DnR-cF-nzS"/>
+                            <constraint firstItem="9sm-ji-kpT" firstAttribute="centerY" secondItem="o7t-c1-Grc" secondAttribute="centerY" id="UI7-Jg-LSg"/>
+                            <constraint firstItem="9sm-ji-kpT" firstAttribute="leading" secondItem="kfc-fo-0e5" secondAttribute="leading" constant="50" id="bqU-v6-TDQ"/>
+                            <constraint firstItem="9sm-ji-kpT" firstAttribute="centerX" secondItem="o7t-c1-Grc" secondAttribute="centerX" id="iEa-6D-BqA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kfc-fo-0e5"/>
+                    </view>
+                    <connections>
+                        <outlet property="otherUserDetailButton" destination="Q1U-WX-APe" id="PNQ-fw-rbC"/>
+                        <outlet property="photoDetailButton" destination="KzI-Sm-cPT" id="VJX-bs-8Uv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="knY-bX-fo9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="626" y="-178"/>
+        </scene>
+    </scenes>
+</document>

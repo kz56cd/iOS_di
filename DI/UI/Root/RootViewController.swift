@@ -10,16 +10,11 @@ import UIKit
 import Prelude
 
 final class RootViewController: UIViewController, ContainerViewShowing {
-    
+
     var viewController: UIViewController?
 
     @IBOutlet weak var containerView: UIView!
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        prepareContainerView()
-//    }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         prepareContainerView()

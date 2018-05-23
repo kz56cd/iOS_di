@@ -11,21 +11,21 @@ import UIKit
 final class MainTabCoordinator {
     fileprivate let mainTabController: MainTabViewController
 //    fileprivate let mainTabRouter: MainTabViewRouting
-    
+
     fileprivate let childCoordinators: [ViewControllerCoordinator]
     let viewControllerFactory: ViewControllerFactoryType
-    
+
 //    fileprivate var welcomeCoordinator: WelcomeCoordinatorProtocol
-    
+
     init(
         viewControllerFactory: ViewControllerFactoryType,
         coordinatorFactory: CoordinatorFactoryType
 //        welcomeCoordinator: WelcomeCoordinatorProtocol
         ) {
-        
+
         self.viewControllerFactory = viewControllerFactory
 //        self.welcomeCoordinator = welcomeCoordinator
-        
+
         let vc = viewControllerFactory.mainTab()
         mainTabController = vc
 //        mainTabRouter = router
@@ -37,11 +37,11 @@ final class MainTabCoordinator {
 }
 
 extension MainTabCoordinator: ViewControllerCoordinator {
-    
+
     var presenter: UIViewController {
         return mainTabController as UIViewController
     }
-    
+
     func start() {
         mainTabController.setViewControllers(
             childCoordinators.map { $0.presenter },

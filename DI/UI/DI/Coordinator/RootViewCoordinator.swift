@@ -9,14 +9,14 @@
 import UIKit
 
 final class RootViewCoordinator {
-    
+
     fileprivate let rootViewController: RootViewController
     fileprivate let mainTabCoordinator: MainTabCoordinator
 //    fileprivate var welcomeCoordinator: WelcomeCoordinator?
-    
+
     let viewControllerFactory: ViewControllerFactoryType
     fileprivate let coordinatorFactory: CoordinatorFactoryType
-    
+
     init(
         viewControllerFactory: ViewControllerFactoryType,
         coordinatorFactory: CoordinatorFactoryType
@@ -33,16 +33,16 @@ extension RootViewCoordinator: ViewControllerCoordinator {
     var presenter: UIViewController {
         return rootViewController as UIViewController
     }
-    
+
     func start() {
         rootViewController.viewController = mainTabCoordinator.presenter
         mainTabCoordinator.start()
-        
+
 //        if !TokenStatusProvider().hasTokens {
 //            presentWelcomeViews()
 //        }
     }
-    
+
 //    private func presentWelcomeViews() {
 //        welcomeCoordinator = coordinatorFactory.welcomeCoordinator()
 //        welcomeCoordinator?.start()

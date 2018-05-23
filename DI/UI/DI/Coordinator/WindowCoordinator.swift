@@ -9,15 +9,15 @@
 import UIKit
 
 final class WindowCoordinator {
-    
+
     private let window: UIWindow
     private let rootViewCoordinator: ViewControllerCoordinator
-    
+
     init(window: UIWindow, coordinatorFactory: CoordinatorFactoryType) {
         self.window = window
         self.rootViewCoordinator = coordinatorFactory.rootViewCoordinator()
     }
-    
+
     func start() {
         window.rootViewController = rootViewCoordinator.presenter
         window.makeKeyAndVisible()

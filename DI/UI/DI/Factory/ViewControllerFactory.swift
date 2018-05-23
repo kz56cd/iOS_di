@@ -15,17 +15,19 @@ protocol ViewControllerFactoryType {
 
     // MARK: - personal
     func photoTop() -> PhotoTopViewController
+    func photoDetail(by id: Int) -> PhotoDetailViewController
 
     func userTop() -> UserTopViewController
+    func userDetail(by id: Int) -> UserDetailViewController
 }
 
 final class ViewControllerFactory: ViewControllerFactoryType {
     private let components: ComponentsProtocol
-    
+
     init(components: ComponentsProtocol) {
         self.components = components
     }
-    
+
     // MARK: - common
     func rootViewController() -> RootViewController {
         return StoryboardScene.RootViewController.initialScene.instantiate()
@@ -33,13 +35,27 @@ final class ViewControllerFactory: ViewControllerFactoryType {
     func mainTab() -> MainTabViewController {
         return MainTabViewController()
     }
-    
+
     // MARK: - personal
     func photoTop() -> PhotoTopViewController {
-        return StoryboardScene.PhotoTopViewController.initialScene.instantiate()
+        let viewController = StoryboardScene.PhotoTopViewController.initialScene.instantiate()
+        viewController.reactor = PhotoTopViewReactor()
+        return viewController
     }
-    
+    func photoDetail(by id: Int) -> PhotoDetailViewController {
+        let viewController = StoryboardScene.PhotoDetailViewController.initialScene.instantiate()
+        viewController.reactor = PhotoDetailViewReactor(id)
+        return viewController
+    }
+
     func userTop() -> UserTopViewController {
-        return StoryboardScene.UserTopViewController.initialScene.instantiate()
+        let viewController = StoryboardScene.UserTopViewController.initialScene.instantiate()
+        viewController.reactor = UserTopViewReactor()
+        return viewController
+    }
+    func userDetail(by id: Int) -> UserDetailViewController {
+        let viewController = StoryboardScene.UserDetailViewController.initialScene.instantiate()
+        viewController.reactor = UserDetailViewReactor(id)
+        return viewController
     }
 }

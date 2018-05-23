@@ -10,7 +10,7 @@ import UIKit
 import FontAwesomeKit
 
 // TODO: Inheritance detailPresentable...
-protocol UserCoordinatorProtocol: NavigationCoordinator {
+protocol UserCoordinatorProtocol: NavigationCoordinator, DetailsPresentable {
     // stub
 }
 
@@ -18,14 +18,14 @@ final class UserCoordinator: UserCoordinatorProtocol {
     let navigationController: UINavigationController
     let viewControllerFactory: ViewControllerFactoryType
     let coordinatorFactory: CoordinatorFactoryType
-    
+
     init(
         viewControllerFactory: ViewControllerFactoryType,
         coordinatorFactory: CoordinatorFactoryType
         ) {
         self.viewControllerFactory = viewControllerFactory
         self.coordinatorFactory = coordinatorFactory
-        
+
         navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = false
         navigationController.navigationBar.barTintColor = .white
@@ -36,12 +36,23 @@ final class UserCoordinator: UserCoordinatorProtocol {
         )
         navigationController.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
     }
-    
+
     func start() {
-        let vc = viewControllerFactory.userTop()
-        navigationController.pushViewController(vc, animated: true)
-        
-        // NOTE: Add routing by router if you like ('router' also means viewmodel, or reactor..)
+        let viewController = viewControllerFactory.userTop()
+        navigationController.pushViewController(viewController, animated: true)
+
+        _ = viewController.reactor?
+            .routeSelected
+            .subscribe(onNext: { [weak self] route in
+                guard let route = route else { return }
+                switch route {
+                case .detail01:
+                    print("💋 UserCoordinator: detail01")
+                    self?.pushUserDetail(by: 1)
+                case .detail02:
+                    print("💋 UserCoordinator: detail02")
+                    self?.pushUserDetail(by: 2)
+                }
+            })
     }
 }
-

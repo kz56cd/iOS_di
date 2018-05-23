@@ -16,7 +16,7 @@ protocol UIFactoriesProtocol {
 final class UIFactories: UIFactoriesProtocol {
     let viewControllerFactory: ViewControllerFactoryType
     let coordinatorFactory: CoordinatorFactoryType
-    
+
     init(components: ComponentsProtocol) {
         let _viewControllerFactory = ViewControllerFactory(components: components)
         viewControllerFactory = _viewControllerFactory
