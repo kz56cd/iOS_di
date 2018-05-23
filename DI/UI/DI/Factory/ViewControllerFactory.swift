@@ -48,6 +48,8 @@ final class ViewControllerFactory: ViewControllerFactoryType {
     }
     
     func userTop() -> UserTopViewController {
-        return StoryboardScene.UserTopViewController.initialScene.instantiate()
+        let viewController = StoryboardScene.UserTopViewController.initialScene.instantiate()
+        viewController.reactor = UserTopViewReactor()
+        return viewController
     }
 }

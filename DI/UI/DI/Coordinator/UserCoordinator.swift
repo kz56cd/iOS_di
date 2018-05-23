@@ -10,7 +10,7 @@ import UIKit
 import FontAwesomeKit
 
 // TODO: Inheritance detailPresentable...
-protocol UserCoordinatorProtocol: NavigationCoordinator {
+protocol UserCoordinatorProtocol: NavigationCoordinator, DetailsPresentable {
     // stub
 }
 
@@ -38,10 +38,22 @@ final class UserCoordinator: UserCoordinatorProtocol {
     }
     
     func start() {
-        let vc = viewControllerFactory.userTop()
-        navigationController.pushViewController(vc, animated: true)
+        let viewController = viewControllerFactory.userTop()
+        navigationController.pushViewController(viewController, animated: true)
         
-        // NOTE: Add routing by router if you like ('router' also means viewmodel, or reactor..)
+        _ = viewController.reactor?
+            .routeSelected
+            .subscribe(onNext: { [weak self] route in
+                guard let route = route else { return }
+                switch route {
+                case .detail01:
+                    print("💋 UserCoordinator: detail01")
+                    self?.pushUserDetail(by: 1)
+                case .detail02:
+                    print("💋 UserCoordinator: detail02")
+                    self?.pushUserDetail(by: 2)
+                }
+            })
     }
 }
 

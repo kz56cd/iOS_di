@@ -35,6 +35,7 @@
 		EA94800F20B2A0DA000C350B /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94800E20B2A0DA000C350B /* PhotoDetailViewController.swift */; };
 		EA94801120B2A0E4000C350B /* PhotoDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA94801020B2A0E4000C350B /* PhotoDetailViewController.storyboard */; };
 		EA94801320B2A0F6000C350B /* PhotoDetailViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94801220B2A0F6000C350B /* PhotoDetailViewReactor.swift */; };
+		EA94801520B4EE2A000C350B /* UserTopViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94801420B4EE2A000C350B /* UserTopViewRouter.swift */; };
 		EAA24C2920A9178D000239DB /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */; };
 		EAA24C2C20A9187A000239DB /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C2B20A9187A000239DB /* MainTabViewController.swift */; };
 		EAA24C2F20A91C04000239DB /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA24C2E20A91C04000239DB /* Prelude.framework */; };
@@ -105,6 +106,7 @@
 		EA94800E20B2A0DA000C350B /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		EA94801020B2A0E4000C350B /* PhotoDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoDetailViewController.storyboard; sourceTree = "<group>"; };
 		EA94801220B2A0F6000C350B /* PhotoDetailViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewReactor.swift; sourceTree = "<group>"; };
+		EA94801420B4EE2A000C350B /* UserTopViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTopViewRouter.swift; sourceTree = "<group>"; };
 		EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		EAA24C2B20A9187A000239DB /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		EAA24C2E20A91C04000239DB /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Prelude.framework; path = Carthage/Build/iOS/Prelude.framework; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			children = (
 				EAF068E120A95D20007B5243 /* UserTopViewController.storyboard */,
 				EAF068DF20A95CFB007B5243 /* UserTopViewController.swift */,
+				EA94801420B4EE2A000C350B /* UserTopViewRouter.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				EAA24C3820A91E1D000239DB /* PhotoCoordinator.swift in Sources */,
 				EAF068E020A95CFB007B5243 /* UserTopViewController.swift in Sources */,
 				EA1B08A520A7355B00E2856B /* CoordinatorFactory.swift in Sources */,
+				EA94801520B4EE2A000C350B /* UserTopViewRouter.swift in Sources */,
 				EA1B08AB20A7372300E2856B /* RootViewCoordinator.swift in Sources */,
 				EA1B08A320A7355100E2856B /* ViewControllerFactory.swift in Sources */,
 				EA1B086320A72FED00E2856B /* AppDelegate.swift in Sources */,
