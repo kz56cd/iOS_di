@@ -13,7 +13,7 @@ protocol CoordinatorFactoryType {
     func windowCoordinator(window: UIWindow) -> WindowCoordinator
     func rootViewCoordinator() -> RootViewCoordinator
     func mainTabCoordinator() -> MainTabCoordinator
-    
+
     // MARK: - personal
 //    func welcomeCoordinator() -> WelcomeCoordinator
     func photoCoordinator() -> PhotoCoordinatorProtocol
@@ -23,7 +23,7 @@ protocol CoordinatorFactoryType {
 final class CoordinatorFactory: CoordinatorFactoryType {
     private let viewControllerFactory: ViewControllerFactoryType
     private let components: ComponentsProtocol
-    
+
     init(
         viewControllerFactory: ViewControllerFactoryType,
         components: ComponentsProtocol
@@ -31,7 +31,7 @@ final class CoordinatorFactory: CoordinatorFactoryType {
         self.viewControllerFactory = viewControllerFactory
         self.components = components
     }
-    
+
     // MARK: - common
     func windowCoordinator(window: UIWindow) -> WindowCoordinator {
         return WindowCoordinator(window: window, coordinatorFactory: self)
@@ -48,7 +48,7 @@ final class CoordinatorFactory: CoordinatorFactoryType {
             coordinatorFactory: self
         )
     }
-    
+
     // MARK: - personal
     func photoCoordinator() -> PhotoCoordinatorProtocol {
         return PhotoCoordinator(
@@ -56,7 +56,7 @@ final class CoordinatorFactory: CoordinatorFactoryType {
             coordinatorFactory: self
         )
     }
-    
+
     func userCoordinator() -> UserCoordinatorProtocol {
         return UserCoordinator(
             viewControllerFactory: viewControllerFactory,

@@ -19,25 +19,25 @@ enum UserTopViewRouter {
 }
 
 final class UserTopViewReactor: Reactor {
-    
+
     enum Action {
         case tappedDetail01
         case tappedDetail02
     }
-    
+
     enum Mutation {}
-    
+
     struct State {}
-    
+
     let routeSelected: Observable<UserTopViewRouter?>
     let initialState = State()
-    
+
     private var routeSelectedSubject = PublishSubject<UserTopViewRouter?>()
-    
+
     init() {
         routeSelected = routeSelectedSubject.asObservable()
     }
-    
+
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .tappedDetail01:
@@ -50,12 +50,12 @@ final class UserTopViewReactor: Reactor {
             return Observable.empty()
         }
     }
-    
+
     func reduce(
         state: State,
         mutation: Mutation
         ) -> State {
-        
+
         switch mutation {
             // no mutation cases
         }

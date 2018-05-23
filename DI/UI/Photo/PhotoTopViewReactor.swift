@@ -19,25 +19,25 @@ enum PhotoTopViewRouter {
 }
 
 final class PhotoTopViewReactor: Reactor {
-    
+
     enum Action {
         case tappedDetail01
         case tappedDetail02
     }
-    
+
     enum Mutation {}
-    
+
     struct State {}
-    
+
     let routeSelected: Observable<PhotoTopViewRouter?>
     let initialState = State()
-    
+
     private var routeSelectedSubject = PublishSubject<PhotoTopViewRouter?>()
-    
+
     init() {
         routeSelected = routeSelectedSubject.asObservable()
     }
-    
+
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .tappedDetail01:
@@ -50,12 +50,12 @@ final class PhotoTopViewReactor: Reactor {
             return Observable.empty()
         }
     }
-    
+
     func reduce(
         state: State,
         mutation: Mutation
         ) -> State {
-        
+
         switch mutation {
             // no mutation cases
         }

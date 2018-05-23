@@ -32,7 +32,7 @@ extension PhotoTopViewController {
             }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-        
+
         photoDetail02button.rx.tap
             .map {
                 print("🤠 tapped: photoDetail02")

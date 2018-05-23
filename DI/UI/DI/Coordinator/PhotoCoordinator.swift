@@ -18,14 +18,14 @@ final class PhotoCoordinator: PhotoCoordinatorProtocol {
     let navigationController: UINavigationController
     let viewControllerFactory: ViewControllerFactoryType
     let coordinatorFactory: CoordinatorFactoryType
-    
+
     init(
         viewControllerFactory: ViewControllerFactoryType,
         coordinatorFactory: CoordinatorFactoryType
         ) {
         self.viewControllerFactory = viewControllerFactory
         self.coordinatorFactory = coordinatorFactory
-        
+
         navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = false
         navigationController.navigationBar.barTintColor = .white
@@ -36,11 +36,11 @@ final class PhotoCoordinator: PhotoCoordinatorProtocol {
         )
         navigationController.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
     }
-    
+
     func start() {
         let viewController = viewControllerFactory.photoTop()
         navigationController.pushViewController(viewController, animated: true)
-        
+
         // NOTE: Add routing by router if you like ('router' also means viewmodel, or reactor..)
         _ = viewController.reactor?
             .routeSelected

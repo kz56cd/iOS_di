@@ -23,11 +23,11 @@ protocol ViewControllerFactoryType {
 
 final class ViewControllerFactory: ViewControllerFactoryType {
     private let components: ComponentsProtocol
-    
+
     init(components: ComponentsProtocol) {
         self.components = components
     }
-    
+
     // MARK: - common
     func rootViewController() -> RootViewController {
         return StoryboardScene.RootViewController.initialScene.instantiate()
@@ -35,7 +35,7 @@ final class ViewControllerFactory: ViewControllerFactoryType {
     func mainTab() -> MainTabViewController {
         return MainTabViewController()
     }
-    
+
     // MARK: - personal
     func photoTop() -> PhotoTopViewController {
         let viewController = StoryboardScene.PhotoTopViewController.initialScene.instantiate()
@@ -47,7 +47,7 @@ final class ViewControllerFactory: ViewControllerFactoryType {
         viewController.reactor = PhotoDetailViewReactor(id)
         return viewController
     }
-    
+
     func userTop() -> UserTopViewController {
         let viewController = StoryboardScene.UserTopViewController.initialScene.instantiate()
         viewController.reactor = UserTopViewReactor()

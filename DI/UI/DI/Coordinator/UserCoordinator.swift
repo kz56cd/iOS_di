@@ -18,14 +18,14 @@ final class UserCoordinator: UserCoordinatorProtocol {
     let navigationController: UINavigationController
     let viewControllerFactory: ViewControllerFactoryType
     let coordinatorFactory: CoordinatorFactoryType
-    
+
     init(
         viewControllerFactory: ViewControllerFactoryType,
         coordinatorFactory: CoordinatorFactoryType
         ) {
         self.viewControllerFactory = viewControllerFactory
         self.coordinatorFactory = coordinatorFactory
-        
+
         navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = false
         navigationController.navigationBar.barTintColor = .white
@@ -36,11 +36,11 @@ final class UserCoordinator: UserCoordinatorProtocol {
         )
         navigationController.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
     }
-    
+
     func start() {
         let viewController = viewControllerFactory.userTop()
         navigationController.pushViewController(viewController, animated: true)
-        
+
         _ = viewController.reactor?
             .routeSelected
             .subscribe(onNext: { [weak self] route in
@@ -56,4 +56,3 @@ final class UserCoordinator: UserCoordinatorProtocol {
             })
     }
 }
-

@@ -24,11 +24,11 @@ extension MainTabViewController {
         tabBar.barTintColor = .white
         tabBar.backgroundColor = .white
     }
-    
+
     fileprivate func prepareNavigationBar() {
         UINavigationBar.appearance().backgroundColor = .white
     }
-    
+
 }
 
 extension MainTabViewController: UITabBarControllerDelegate {

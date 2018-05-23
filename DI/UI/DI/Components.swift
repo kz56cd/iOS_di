@@ -13,9 +13,9 @@ protocol ComponentsProtocol {
 }
 
 final class Components: ComponentsProtocol {
-    
+
     let anyService: AnyService
-    
+
     init() {
         anyService = AnyService()
     }

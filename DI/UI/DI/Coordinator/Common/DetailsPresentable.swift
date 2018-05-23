@@ -15,11 +15,11 @@ protocol DetailsPresentable: class {
 }
 
 extension DetailsPresentable where Self: NavigationCoordinator {
-    
+
     func pushPhotoDetail(by id: Int) {
         let viewController = viewControllerFactory.photoDetail(by: id)
         navigationController.pushViewController(viewController, animated: true)
-        
+
         _ = viewController.reactor?
             .routeSelected
             .subscribe(onNext: { [weak self] route in
@@ -34,11 +34,11 @@ extension DetailsPresentable where Self: NavigationCoordinator {
                 }
             })
     }
-    
+
     func pushUserDetail(by id: Int) {
         let viewController = viewControllerFactory.userDetail(by: id)
         navigationController.pushViewController(viewController, animated: true)
-        
+
         _ = viewController.reactor?
             .routeSelected
             .subscribe(onNext: { [weak self] route in

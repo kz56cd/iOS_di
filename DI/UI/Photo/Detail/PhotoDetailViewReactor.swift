@@ -20,28 +20,28 @@ enum PhotoDetailViewRouter {
 }
 
 final class PhotoDetailViewReactor: Reactor {
-    
+
     enum Action {
         case tappedUserDetail
         case tappedOtherDetail
     }
-    
+
     enum Mutation {}
-    
+
     struct State {}
-    
+
     let initialState = State()
     let id: Int
-    
+
     let routeSelected: Observable<PhotoDetailViewRouter?>
 
     private var routeSelectedSubject = PublishSubject<PhotoDetailViewRouter?>()
-    
+
     init(_ id: Int) {
         self.id = id
         routeSelected = routeSelectedSubject.asObservable()
     }
-    
+
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .tappedUserDetail:
@@ -60,12 +60,12 @@ final class PhotoDetailViewReactor: Reactor {
         }
 
     }
-    
+
     func reduce(
         state: State,
         mutation: Mutation
         ) -> State {
-        
+
         switch mutation {
             // no mutation cases
         }
@@ -74,4 +74,3 @@ final class PhotoDetailViewReactor: Reactor {
 
 extension PhotoDetailViewReactor: PhotoDetailViewRouting {
 }
-

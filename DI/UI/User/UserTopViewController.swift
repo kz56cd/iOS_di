@@ -11,11 +11,11 @@ import RxCocoa
 import RxSwift
 
 class UserTopViewController: UIViewController, StoryboardView {
-    
+
     @IBOutlet weak var userDetail01button: UIButton!
     @IBOutlet weak var userDetail02button: UIButton!
     var disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,7 +32,7 @@ extension UserTopViewController {
             }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-        
+
         userDetail02button.rx.tap
             .map {
                 print("🤠 tapped: userDetail02")
@@ -42,4 +42,3 @@ extension UserTopViewController {
             .disposed(by: disposeBag)
     }
 }
-

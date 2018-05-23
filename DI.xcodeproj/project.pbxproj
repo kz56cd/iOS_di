@@ -39,6 +39,7 @@
 		EA94801820B4F058000C350B /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94801720B4F058000C350B /* UserDetailViewController.swift */; };
 		EA94801A20B4F05F000C350B /* UserDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA94801920B4F05F000C350B /* UserDetailViewController.storyboard */; };
 		EA94801C20B4F06C000C350B /* UserDetailViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94801B20B4F06C000C350B /* UserDetailViewReactor.swift */; };
+		EA94802120B4F987000C350B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EA94802020B4F986000C350B /* .swiftlint.yml */; };
 		EAA24C2920A9178D000239DB /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */; };
 		EAA24C2C20A9187A000239DB /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA24C2B20A9187A000239DB /* MainTabViewController.swift */; };
 		EAA24C2F20A91C04000239DB /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA24C2E20A91C04000239DB /* Prelude.framework */; };
@@ -113,6 +114,7 @@
 		EA94801720B4F058000C350B /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		EA94801920B4F05F000C350B /* UserDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetailViewController.storyboard; sourceTree = "<group>"; };
 		EA94801B20B4F06C000C350B /* UserDetailViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewReactor.swift; sourceTree = "<group>"; };
+		EA94802020B4F986000C350B /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EAA24C2820A9178D000239DB /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		EAA24C2B20A9187A000239DB /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		EAA24C2E20A91C04000239DB /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Prelude.framework; path = Carthage/Build/iOS/Prelude.framework; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				EA1B086020A72FED00E2856B /* Products */,
 				EAA24C2D20A91C04000239DB /* Frameworks */,
 				EA1B08B120A73DA900E2856B /* CartFile */,
+				EA94802020B4F986000C350B /* .swiftlint.yml */,
 				27656DFD89B4F9AAC5874E45 /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				EA1B085D20A72FED00E2856B /* Resources */,
 				B40AF89DC814390823DFCFAB /* [CP] Embed Pods Frameworks */,
 				EA1B08B420A73E2400E2856B /* SwiftGen */,
+				EA3B567720B4F9B000C1C9AA /* Swiftlint */,
 				EAA24C3020A91C0B000239DB /* Carthage */,
 			);
 			buildRules = (
@@ -489,6 +493,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA94802120B4F987000C350B /* .swiftlint.yml in Resources */,
 				EAF068E220A95D20007B5243 /* UserTopViewController.storyboard in Resources */,
 				EAA24C3620A91D79000239DB /* PhotoTopViewController.storyboard in Resources */,
 				EA1B086D20A72FF000E2856B /* LaunchScreen.storyboard in Resources */,
@@ -589,6 +594,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftgen >/dev/null; then\nswiftgen storyboards --template swift4 \"$PROJECT_DIR/DI\" --output \"$PROJECT_DIR/DI/Constants/Storyboards.swift\"\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+		};
+		EA3B567720B4F9B000C1C9AA /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nswiftlint autocorrect\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		EAA24C3020A91C0B000239DB /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;

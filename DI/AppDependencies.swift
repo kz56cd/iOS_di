@@ -9,23 +9,23 @@
 import UIKit
 
 protocol AppDependenciesProtocol {
-    
+
     var components: ComponentsProtocol { get }
     var uiFactories: UIFactoriesProtocol { get }
-    
+
     func windowCoordinator(window: UIWindow) -> WindowCoordinator
 }
 
 final class AppDependencies: AppDependenciesProtocol {
-    
+
     let components: ComponentsProtocol
     let uiFactories: UIFactoriesProtocol
-    
+
     init() {
         components = Components()
         uiFactories = UIFactories(components: components)
     }
-    
+
     func windowCoordinator(window: UIWindow) -> WindowCoordinator {
         return uiFactories.coordinatorFactory.windowCoordinator(window: window)
     }

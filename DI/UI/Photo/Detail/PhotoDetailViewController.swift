@@ -10,17 +10,17 @@ import ReactorKit
 import RxCocoa
 import RxSwift
 
-class PhotoDetailViewController: UIViewController , StoryboardView {
+class PhotoDetailViewController: UIViewController, StoryboardView {
     @IBOutlet weak var userDetailButton: UIButton!
     @IBOutlet weak var otherPhotoDetailButton: UIButton!
-    
+
     var disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareNavigation()
     }
-    
+
     // MARK: - private func
     private func prepareNavigation() {
         guard let reactor = reactor else { return }
@@ -36,7 +36,7 @@ extension PhotoDetailViewController {
             .map { Reactor.Action.tappedUserDetail }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-        
+
         otherPhotoDetailButton.rx.tap
             .map { Reactor.Action.tappedOtherDetail }
             .bind(to: reactor.action)
