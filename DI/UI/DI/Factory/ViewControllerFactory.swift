@@ -18,6 +18,7 @@ protocol ViewControllerFactoryType {
     func photoDetail(by id: Int) -> PhotoDetailViewController
 
     func userTop() -> UserTopViewController
+    func userDetail(by id: Int) -> UserDetailViewController
 }
 
 final class ViewControllerFactory: ViewControllerFactoryType {
@@ -50,6 +51,11 @@ final class ViewControllerFactory: ViewControllerFactoryType {
     func userTop() -> UserTopViewController {
         let viewController = StoryboardScene.UserTopViewController.initialScene.instantiate()
         viewController.reactor = UserTopViewReactor()
+        return viewController
+    }
+    func userDetail(by id: Int) -> UserDetailViewController {
+        let viewController = StoryboardScene.UserDetailViewController.initialScene.instantiate()
+        viewController.reactor = UserDetailViewReactor(id)
         return viewController
     }
 }

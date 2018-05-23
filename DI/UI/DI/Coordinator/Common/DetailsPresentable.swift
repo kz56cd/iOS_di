@@ -36,6 +36,21 @@ extension DetailsPresentable where Self: NavigationCoordinator {
     }
     
     func pushUserDetail(by id: Int) {
-        // stub
+        let viewController = viewControllerFactory.userDetail(by: id)
+        navigationController.pushViewController(viewController, animated: true)
+        
+        _ = viewController.reactor?
+            .routeSelected
+            .subscribe(onNext: { [weak self] route in
+                guard let route = route else { return }
+                switch route {
+                case .photoDetail(let id):
+                    self?.pushPhotoDetail(by: id)
+                case .detail01:
+                    self?.pushUserDetail(by: 1)
+                case .detail02:
+                    self?.pushUserDetail(by: 2)
+                }
+            })
     }
 }

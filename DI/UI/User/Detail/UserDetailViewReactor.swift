@@ -1,28 +1,28 @@
 //
-//  PhotoDetailViewReactor.swift
+//  UserDetailViewReactor.swift
 //  DI
 //
-//  Created by Masakazu Sano on 2018/05/21.
+//  Created by Masakazu Sano on 2018/05/23.
 //  Copyright © 2018年 Masakazu Sano. All rights reserved.
 //
 
 import ReactorKit
 import RxSwift
 
-protocol PhotoDetailViewRouting {
-    var routeSelected: Observable<PhotoDetailViewRouter?> { get }
+protocol UserDetailViewRouting {
+    var routeSelected: Observable<UserDetailViewRouter?> { get }
 }
 
-enum PhotoDetailViewRouter {
-    case userDetail(id: Int)
+enum UserDetailViewRouter {
+    case photoDetail(id: Int)
     case detail01
     case detail02
 }
 
-final class PhotoDetailViewReactor: Reactor {
+final class UserDetailViewReactor: Reactor {
     
     enum Action {
-        case tappedUserDetail
+        case tappedPhotoDetail
         case tappedOtherDetail
     }
     
@@ -33,9 +33,9 @@ final class PhotoDetailViewReactor: Reactor {
     let initialState = State()
     let id: Int
     
-    let routeSelected: Observable<PhotoDetailViewRouter?>
-
-    private var routeSelectedSubject = PublishSubject<PhotoDetailViewRouter?>()
+    let routeSelected: Observable<UserDetailViewRouter?>
+    
+    private var routeSelectedSubject = PublishSubject<UserDetailViewRouter?>()
     
     init(_ id: Int) {
         self.id = id
@@ -44,10 +44,11 @@ final class PhotoDetailViewReactor: Reactor {
     
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        case .tappedUserDetail:
-            routeSelectedSubject.onNext(.userDetail(id: self.id))
+        case .tappedPhotoDetail:
+            routeSelectedSubject.onNext(.photoDetail(id: self.id))
             return Observable.empty()
         case .tappedOtherDetail:
+            print(id)
             switch id {
             case 1:
                 routeSelectedSubject.onNext(.detail02)
@@ -58,7 +59,7 @@ final class PhotoDetailViewReactor: Reactor {
             }
             return Observable.empty()
         }
-
+        
     }
     
     func reduce(
@@ -72,6 +73,5 @@ final class PhotoDetailViewReactor: Reactor {
     }
 }
 
-extension PhotoDetailViewReactor: PhotoDetailViewRouting {
+extension UserDetailViewReactor: UserDetailViewRouting {
 }
-
